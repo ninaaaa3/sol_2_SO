@@ -7,6 +7,7 @@ if (NOT OpenCV_FOUND)
 endif()
 
 include_directories(${OpenCV_INCLUDE_DIRS})
+include_directories(${PROJECT_SOURCE_DIR}/include)
 
-add_executable(random_image_generator generator.cpp)
+add_executable(random_image_generator src/main.cpp src/generator.cpp)
 target_link_libraries(random_image_generator ${OpenCV_LIBS})
